@@ -1,4 +1,19 @@
 /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+/*
  * Globals
  */
 
@@ -65,17 +80,17 @@ body {
  * Header
  */
 .masthead-brand {
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-family: 'Dancing Script', cursive;
-  font-size: 32px;
+  font-size: 48px;
 }
 
 .masthead-nav > li {
   display: inline-block;
 }
 .masthead-nav > li + li {
-  margin-left: 20px;
+  margin-left: 32px;
 }
 .masthead-nav > li > a {
   padding-right: 0;
@@ -116,8 +131,13 @@ body {
   padding: 0 20px;
 }
 .cover .btn-lg {
-  padding: 10px 20px;
+  padding: 16px 32px;
   font-weight: bold;
+  font-size: 100%;
+}
+
+.cover-heading {
+  line-height: 150%;
 }
 
 
@@ -127,7 +147,7 @@ body {
 
 .mastfoot {
   color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.8);
 }
 
 

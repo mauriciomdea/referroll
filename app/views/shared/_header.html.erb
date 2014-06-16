@@ -1,0 +1,78 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><strong>Referroll</strong></a>
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-user"></span>
+      </button> -->
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Jobs", "/jobs" %></li>
+        <li><%= link_to "Referrals", "/referrals" %></li>
+        <li><a href="#/teams">Teams</a></li>
+        <li><a href="#/scores">Scores</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <form class="navbar-form navbar-left">
+          <input type="search" class="form-control input-sm" placeholder="Search help">
+        </form> -->
+        <!-- Normal view -->
+        <li class="dropdown hidden-xs">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" style="">
+          <i class="fa fa-inbox notification-icon"></i>
+          <span class="label label-warning notification-number">5</span>
+          <b class="caret notification-caret"></b></a>
+          <div class="list-group dropdown-menu dropdown-notification">
+            <small><a href="#" class="list-group-item"><span class="label label-info">i</span>&nbsp; New referral for Analista de Testes Sr <small class="pull-right">Just now</small></a></small>
+            <small><a href="#" class="list-group-item"><span class="label label-info">i</span>&nbsp; New referral for Estagiário de Marketing Digital  <small class="pull-right">Two minutes ago</small></a></small>
+            <small><a href="#" class="list-group-item"><span class="label label-warning">?</span>&nbsp; Jonathan Smith invited you to collaborate on a job <small class="pull-right">Yesterday</small></a></small>
+            <small><a href="#" class="list-group-item"><span class="label label-success">!</span>&nbsp; Jonathan Smith accepted your team invite <small class="pull-right">Yesterday</small></a></small>
+            <small><a href="#" class="list-group-item"><span class="label label-success">!</span>&nbsp; You acquired the Trophee Badge! <small class="pull-right">One year ago</small></a></small>
+          </div>
+          <!-- <div class="list-group dropdown-menu dropdown-notification">
+            <a href="#" class="list-group-item">
+              <p class="list-group-item-heading">New referral for Analista de Testes Sr <span class="label label-info pull-right">i</span></p>
+              <small class="list-group-item-text">Just now</small>
+            </a>
+            <a href="#" class="list-group-item">
+              <p class="list-group-item-heading">New referral for Estagiário de Marketing Digital <span class="label label-info pull-right">i</span></p>
+              <small class="list-group-item-text ">Two hours ago</small>
+            </a>
+            <a href="#" class="list-group-item">
+              <p class="list-group-item-heading">Jonathan Smith invited you to collaborate on a job <span class="label label-warning pull-right">?</span></p>
+              <small class="list-group-item-text ">Yesterday</small>
+            </a>
+            <a href="#" class="list-group-item">
+              <p class="list-group-item-heading">Jonathan Smith accepted your team invite <span class="label label-success pull-right">!</span></p>
+              <small class="list-group-item-text ">Yesterday</small>
+            </a>
+            <a href="#" class="list-group-item">
+              <p class="list-group-item-heading">You acquired the Trophee Badge! <span class="label label-success pull-right">!</span></p>
+              <small class="list-group-item-text ">One year ago</small>
+            </a>
+          </div> -->
+        </li>
+        <li class="dropdown hidden-xs">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <img src="https://secure.gravatar.com/avatar/d0d38d7d12378a13afcdf6caab654434?s=40" class="img-rounded"> <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-profile">
+            <li><a href="#"><i class="icon-user"></i>&nbsp; Profile</a></li>
+            <li><a href="#"><i class="icon-cog"></i>&nbsp; Account</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="icon-signout"></i>&nbsp; Logout...</a></li>
+          </ul>
+        </li>
+        <!-- Extra small view (mobile) -->
+        <li class="hidden-sm hidden-md hidden-lg"><a href="#">Notifications &nbsp;<span class="label label-warning">3</span></a></li>
+        <li class="hidden-sm hidden-md hidden-lg"><a href="#">Profile</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
