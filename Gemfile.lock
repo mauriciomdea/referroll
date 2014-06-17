@@ -30,6 +30,7 @@ GEM
     arel (5.0.1.20140414130214)
     bson (2.3.0)
     builder (3.2.2)
+    callsite (0.0.11)
     connection_pool (2.0.0)
     erubis (2.7.0)
     execjs (2.2.0)
@@ -46,6 +47,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_request (0.3.0)
+      callsite
+      rack-contrib
+      railties
     mime-types (1.25.1)
     minitest (5.3.4)
     mongoid (4.0.0.rc2)
@@ -69,6 +74,9 @@ GEM
     omniauth (1.2.1)
       hashie (>= 1.2, < 3)
       rack (~> 1.0)
+    omniauth-google-oauth2 (0.2.4)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-linkedin-oauth2 (0.1.5)
       omniauth (~> 1.0)
       omniauth-oauth2
@@ -81,6 +89,8 @@ GEM
     origin (2.1.1)
     polyglot (0.3.5)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.1)
@@ -126,8 +136,10 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
+  meta_request
   mongoid (~> 4.0.0.rc2)
   omniauth (~> 1.2.1)
+  omniauth-google-oauth2 (~> 0.2.4)
   omniauth-linkedin-oauth2 (~> 0.1.5)
   rails (= 4.1.1)
   spring

@@ -21,7 +21,7 @@ gem 'jquery-rails'
 # gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -39,9 +39,12 @@ gem 'spring',        group: :development
 gem 'mongoid', '~> 4.0.0.rc2'
 
 gem 'omniauth', '~> 1.2.1'
-# gem 'omniauth-linkedin', '~> 0.2.0'
 gem 'omniauth-linkedin-oauth2', '~> 0.1.5'
+gem 'omniauth-google-oauth2', '~> 0.2.4'
 # gem 'omniauth-facebook', '~> 1.6.0'
-# gem 'omniauth-google-oauth2', '~> 0.2.4'
 # gem 'omniauth-identity', '~> 1.1.1'
 
+group :development do
+	gem 'spring'
+  gem 'meta_request'
+end
