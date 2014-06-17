@@ -1,0 +1,12 @@
+<% if current_user %>
+
+	<p>Signed in as <%= current_user.name %>. <%= link_to "Sign out", sign_out_path %></p>
+
+	<p>Linked accounts:</p>
+	<% current_user.authentications.each do |auth| %>
+
+		<p><%= auth.provider %></p>
+
+	<% end %>
+
+<% end %>
