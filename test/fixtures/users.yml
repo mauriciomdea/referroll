@@ -1,0 +1,52 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  provider: MyString
+  uid: MyString
+  name: MyString
+  email: MyString
+  avatar: MyString
+
+two:
+  provider: MyString
+  uid: MyString
+  name: MyString
+  email: MyString
+  avatar: MyString
+
+# Linkedin AuthHash
+# --- !ruby/hash:OmniAuth::AuthHash
+# provider: linkedin
+# uid: 59DSCl-uxu
+# info: !ruby/hash:OmniAuth::AuthHash::InfoHash
+#   name: Mauricio Almeida
+#   email: mauriciomdea@gmail.com
+#   nickname: Mauricio Almeida
+#   first_name: Mauricio
+#   last_name: Almeida
+#   location: !ruby/hash:OmniAuth::AuthHash
+#     country: !ruby/hash:OmniAuth::AuthHash
+#       code: br
+#     name: São Paulo Area, Brazil
+#   description: Sócio Diretor na Brand New Code
+#   image: http://m.c.lnkd.licdn.com/mpr/mprx/0_Y7bJr1wE7PcmHRN1ySzorKE4SBtfERN1yDPQrleZtNQ0vx_P-WBzYApn_0-rdpv0xu5F09sW2Ui-
+#   urls: !ruby/hash:OmniAuth::AuthHash
+#     public_profile: http://www.linkedin.com/in/mauriciomdea
+# credentials: !ruby/hash:OmniAuth::AuthHash
+#   token: AQVrdIVbKHTjmhIWjVDpLUsVLazIRJIy5wQG9PHyXhUN5tw_YTY1KkZ6EWCvqkbLHEJggtVi9dLrJRUzU2hqdXS6EsqQAUg0HN9HyF15IxxjpnnGus4pCTFKRZeS0QEBmJ2rk--K_nRLCGiezv2hWCMWGuDSd5bizTQTCfR_to71IBCv0Ic
+#   expires_at: 1408151540
+#   expires: true
+# extra: !ruby/hash:OmniAuth::AuthHash
+#   raw_info: !ruby/hash:OmniAuth::AuthHash
+#     emailAddress: mauriciomdea@gmail.com
+#     firstName: Mauricio
+#     headline: Sócio Diretor na Brand New Code
+#     id: 59DSCl-uxu
+#     industry: Information Technology and Services
+#     lastName: Almeida
+#     location: !ruby/hash:OmniAuth::AuthHash
+#       country: !ruby/hash:OmniAuth::AuthHash
+#         code: br
+#       name: São Paulo Area, Brazil
+#     pictureUrl: http://m.c.lnkd.licdn.com/mpr/mprx/0_Y7bJr1wE7PcmHRN1ySzorKE4SBtfERN1yDPQrleZtNQ0vx_P-WBzYApn_0-rdpv0xu5F09sW2Ui-
+#     publicProfileUrl: http://www.linkedin.com/in/mauriciomdea
