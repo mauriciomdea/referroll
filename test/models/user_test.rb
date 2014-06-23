@@ -17,29 +17,15 @@ class UserTest < ActiveSupport::TestCase
   	assert_equal email, user.email, "User not found"
 	end
 
-  # def test_user_from_omniauth
-
-  # 	num_of_users = User.count
-  # 	auth = OmniAuth.config.mock_auth[:linkedin]
-  # 	User.from_omniauth(auth)
-  # 	assert_equal num_of_users+1, User.count
-  	
-  # 	user = User.last
-  # 	email = ""
-  # 	auth.slice(:provider, :uid).try do
-  # 		email = auth.info.email
-  # 	end
-  # 	assert_equal email, user.email
-
-  # end
-
-  # def test_same_user_from_different_service
-
-  # 	auth = OmniAuth.config.mock_auth[:google]
-  # 	User.from_omniauth(auth)
-  # 	assert_equal User.first, User.last, "Two authentications, same user"
-  # 	assert_equal User.first.authentications.size, 2, "Same user, two authentications"
-
-  # end
+	test "should create new authentication for same email" do
+		auth_from_linkedin = OmniAuth.config.mock_auth[:linkedin]
+		user_from_linkedin = User.from_omniauth(auth_from_linkedin)
+		auth_from_google = OmniAuth.config.mock_auth[:google]
+		user_from_google = User.from_omniauth(auth_from_google)
+		assert_equal user_from_linkedin._id, user_from_google._id, "Different users found"
+		assert_equal 2, user_from_google.authentications.size, "Incorrent number of authentications for user"
+		second_login_from_google = User.from_omniauth(auth_from_google)
+		assert_equal 2, user_from_google.authentications.size, "Incorrent number of authentications for user after second login"
+	end
 
 end

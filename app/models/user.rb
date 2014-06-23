@@ -12,9 +12,24 @@ class User
   validates_uniqueness_of :email
 
   def self.from_omniauth(auth)
-	  # where(auth.slice("provider", "uid")).first || where(email: auth["info"]["email"]).first || create_from_omniauth(auth)
-	  where(email: auth["info"]["email"]).first || create_from_omniauth(auth)
+
+  	user = find_with_omniauth(auth)
+  	unless user	# New User
+  			user = create_from_omniauth(auth)
+  	end
+
+		unless Authentication.find_with_omniauth(auth) # New Authentication
+			user.authentications << Authentication.create_with_omniauth(auth)
+			user.save
+		end
+
+		return user
+
 	end
+
+	def self.find_with_omniauth(auth)
+  	where(email: auth["info"]["email"]).first
+  end
 
 	def self.create_from_omniauth(auth)
 	  user = User.new
@@ -22,9 +37,9 @@ class User
     user.email = auth["info"]["email"]
     user.desc = auth["info"]["description"]
     user.avatar = auth["info"]["image"]
-    # user.url = auth["info"]["urls"]["public_profile"]
+    user.authentications << Authentication.create_with_omniauth(auth)
     user.save!
-	  user.authentications.create(uid: auth['uid'], provider: auth['provider'])
+	  return user
 	end
 
 end
