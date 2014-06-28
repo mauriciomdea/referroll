@@ -36,4 +36,12 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Omniauth mocking
+  # Once you have enabled test mode, all requests to OmniAuth will be short 
+  # circuited to use the mock authentication hash as described below. A 
+  # request to /auth/provider will redirect immediately to 
+  # /auth/provider/callback.
+  OmniAuth.config.test_mode = true
+
 end

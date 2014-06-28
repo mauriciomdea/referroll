@@ -37,7 +37,7 @@ class User
     user.email = auth["info"]["email"]
     user.desc = auth["info"]["description"]
     user.avatar = auth["info"]["image"]
-    user.authentications << Authentication.create_with_omniauth(auth)
+    # user.authentications << Authentication.create_with_omniauth(auth)
     user.save!
 	  return user
 	end
