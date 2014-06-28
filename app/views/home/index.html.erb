@@ -6,32 +6,27 @@
 
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">Referroll</h3>
+          <h3 class="masthead-brand"><%= t 'referroll.name' %></h3>
           <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Sign Up</a></li>
-            <% if current_user %>
-              <li>Signed in as <%= current_user.name %>
-              <%= link_to "Sign out", sign_out_path %></li>
-            <% else %>
-              <li><a href="#" data-toggle="modal" data-target="#signInModal">Sign In</a></li>
-            <% end %>
+            <li class="active"><a href="#"><%= t 'actions.home' %></a></li>
+            <li><a href="#"><%= t 'actions.sign-up' %></a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signInModal"><%= t 'actions.sign-in' %></a></li>
           </ul>
         </div>
       </div>
 
       <div class="inner cover">
-        <h1 class="cover-heading">Get your Talent Referral Program ROLLING!</h1>
+        <h1 class="cover-heading"><%= t 'referroll.slogan' %></h1>
         <br>
         <!-- <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p> -->
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-warning">Learn more</a>
+          <a href="#" class="btn btn-lg btn-warning"><%= t 'referroll.cta' %></a>
         </p>
       </div>
 
       <div class="mastfoot">
         <div class="inner">
-          <p>Copyright 2014 by <a href="http://brandnewcode.com">Brand New Code</a>.</p>
+          <p><%= raw t 'referroll.copyright' %>.</p>
         </div>
       </div>
 
@@ -47,15 +42,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="signInModalLabel">Sign In</h4>
+        <h4 class="modal-title" id="signInModalLabel"><%= t 'actions.sign-in' %></h4>
       </div>
       <div class="modal-body">
-        <p><%= link_to raw("<i class='fa fa-fw fa-linkedin-square'></i> Sign in with Linkedin"), "/auth/linkedin", class: "btn btn-lg btn-primary" %></p>
-        <p><%= link_to raw("<i class='fa fa-fw fa-google-plus-square'></i> Sign in with Google"), "/auth/google", class: "btn btn-lg btn-primary" %></p>
+        <p><%= link_to raw("<i class='fa fa-fw fa-linkedin-square'></i> #{t 'actions.sign-in-with'} Linkedin"), "/auth/linkedin", class: "btn btn-lg btn-primary" %></p>
+        <p><%= link_to raw("<i class='fa fa-fw fa-google-plus-square'></i> #{t 'actions.sign-in-with'} Google"), "/auth/google", class: "btn btn-lg btn-primary" %></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        <button type="button" class="btn btn-default" data-dismiss="modal"><%= t 'actions.close' %></button>
       </div>
     </div>
   </div>
