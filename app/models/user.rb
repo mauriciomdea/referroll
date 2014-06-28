@@ -10,6 +10,7 @@ class User
   field :url, type: String
 
   has_many :authentications
+  has_many :jobs
 
   validates_uniqueness_of :email
 

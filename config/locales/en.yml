@@ -24,7 +24,7 @@ en:
     name: 'Referroll'
     slogan: 'Get your Talent Referral Program ROLLING!'
     cta: 'Learn More'
-    copyright: 'Copyright 2014 by <a href="http://brandnewcode.com">Brand New Code</a>'
+    copyright: 'Copyright 2014 by <a href=http://brandnewcode.com>Brand New Code</a>'
   actions: 
     home: 'Home'
     sign-up: 'Sign Up'
@@ -34,6 +34,8 @@ en:
     open: 'Open'
     close: 'Close'
     help: 'Help'
+    create: 'Create'
+    back: 'Back'
   models:
     user: 
       many: 'Users'
