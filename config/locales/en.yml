@@ -20,6 +20,33 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  referroll:
+    name: 'Referroll'
+    slogan: 'Get your Talent Referral Program ROLLING!'
+    cta: 'Learn More'
+    copyright: 'Copyright 2014 by <a href="http://brandnewcode.com">Brand New Code</a>'
+  actions: 
+    home: 'Home'
+    sign-up: 'Sign Up'
+    sign-in: 'Sign In'
+    sign-out: 'Sign Out'
+    sign-in-with: 'Sign in with'
+    open: 'Open'
+    close: 'Close'
+    help: 'Help'
+  models:
+    user: 
+      many: 'Users'
+    job: 
+      many: 'Jobs'
+    referral: 
+      many: 'Referrals'
+    team: 
+      many: 'Teams'
+    score:
+      many: 'Scores'
+    notification:
+      many: 'Notifications'
   date:
     abbr_day_names:
     - Sun
@@ -53,7 +80,7 @@ en:
     - Saturday
     formats:
       default: ! '%Y-%m-%d'
-      long: ! '%B %d, %Y'
+      long: ! '%B %d %Y'
       short: ! '%b %d'
     month_names:
     -
@@ -119,11 +146,11 @@ en:
   errors:
     format: ! '%{attribute} %{message}'
     messages:
-      accepted: must be accepted
-      blank: can't be blank
-      present: must be blank
+      accepted: "must be accepted"
+      blank: "can't be blank"
+      present: "must be blank"
       confirmation: ! "doesn't match %{attribute}"
-      empty: can't be empty
+      empty: "can't be empty"
       equal_to: must be equal to %{count}
       even: must be even
       exclusion: is reserved

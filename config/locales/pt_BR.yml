@@ -1,4 +1,31 @@
-pt-BR:
+pt_BR:
+  referroll:
+    name: 'Referroll'
+    slogan: 'Ponha seu Programa de Indicação de Talentos para RODAR!'
+    cta: 'Saiba Mais'
+    copyright: 'Copyright 2014 por <a href="http://brandnewcode.com">Brand New Code</a>'
+  actions: 
+    home: 'Home'
+    sign-up: 'Registrar'
+    sign-in: 'Entrar'
+    sign-out: 'Sair'
+    sign-in-with: 'Entrar com'
+    open: 'Abrir'
+    close: 'Fechar'
+    help: 'Ajuda'
+  models:
+    user: 
+      many: 'Users'
+    job: 
+      many: 'Jobs'
+    referral: 
+      many: 'Referrals'
+    team: 
+      many: 'Teams'
+    score:
+      many: 'Scores'
+    notification:
+      many: 'Notifications'
   date:
     abbr_day_names:
     - Dom
