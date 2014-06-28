@@ -32,7 +32,17 @@
   <%= render 'shared/header' %>
 
   <div class="container">
+
+    <%= flash_alert flash[:notice], "info" if flash[:notice] %>
+
+    <%= flash_alert flash[:alert], "warning" if flash[:alert] %>
+
+    <%= flash_alert flash[:success], "success" if flash[:success] %>
+
+    <%= flash_alert flash[:error], "danger" if flash[:error] %>
+
     <%= yield %>
+
   </div>
 
   <footer></footer>
