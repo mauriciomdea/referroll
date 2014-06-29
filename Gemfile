@@ -48,3 +48,7 @@ group :development do
 	gem 'spring'
   gem 'meta_request'
 end
+
+group :test do
+  gem 'factory_girl_rails'
+end

@@ -1,15 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  desc: MyString
-  company: MyString
-  status: MyString
-  owner: 
+intern:
+  title: Intern
+  desc: Internship.
+  company: ACME
+  owner: default
 
-two:
-  title: MyString
-  desc: MyString
-  company: MyString
-  status: MyString
-  owner: 
+manager:
+  title: Manager
+  desc: Management.
+  company: ACME
+  owner: default
+
+confidential:
+  title: Manager
+  desc: Manager for confidential company.
+  owner: default

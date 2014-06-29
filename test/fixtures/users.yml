@@ -1,18 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  provider: MyString
-  uid: MyString
-  name: MyString
-  email: MyString
-  avatar: MyString
-
-two:
-  provider: MyString
-  uid: MyString
-  name: MyString
-  email: MyString
-  avatar: MyString
+default:
+  provider: linkedin
+  uid: 01234
+  name: Default User
+  email: default@gmail.com
 
 # Linkedin AuthHash
 # --- !ruby/hash:OmniAuth::AuthHash

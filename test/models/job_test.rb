@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class JobTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  test "should not save job without title" do
+  	job = create(:job, title: nil)
+	  assert_not job.save, "Saved job without a title"
+	end
+
 end
