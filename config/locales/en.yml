@@ -64,10 +64,11 @@ en:
   helpers:
     select:
       prompt: Please select
-    submit:
+    submit: 
       create: "Create %{model}"
       submit: "Save %{model}"
       update: "Update %{model}"
+      save: "Save"
   date:
     abbr_day_names:
     - Sun

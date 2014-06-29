@@ -1,27 +1,13 @@
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+<h3>
+  <%= @job.title.capitalize %>
+  <span class="label label-success pull-right"><%= @job.status.downcase %></span>
+</h3>
+<p><%= @job.desc %></p>
+<p><small>Posted <%= time_ago_in_words(@job.created_at) %> ago by <%= @job.owner.name %>.</small></p>
+<br>
+<p>No referrals yet.</p>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @job.desc %>
-</p>
+<hr>
 
-<p>
-  <strong>Company:</strong>
-  <%= @job.company %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @job.status %>
-</p>
-
-<p>
-  <strong>Owner:</strong>
-  <%= @job.owner %>
-</p>
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to t('actions.back'), jobs_path, class: 'btn btn-primary btn-block' %>
+<%= link_to 'Edit Job', edit_job_path(@job), class: 'btn btn-default btn-block' %>
