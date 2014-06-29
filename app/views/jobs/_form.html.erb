@@ -12,26 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label t('models.job.title') %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :desc %><br>
+    <%= f.label t('models.job.desc') %><br>
     <%= f.text_field :desc %>
   </div>
   <div class="field">
-    <%= f.label :company %><br>
+    <%= f.label t('models.job.company') %><br>
     <%= f.text_field :company %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
+    <%= f.label t('models.job.status') %><br>
     <%= f.text_field :status %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :owner %><br>
-    <%= f.text_field :owner %>
-  </div> -->
   <div class="actions">
-    <%= f.submit t('helpers.submit.create', model: :job), class: 'btn btn-primary' %>
+    <%= f.submit t('helpers.submit.create', model: t('models.job.one')), class: 'btn btn-primary' %>
   </div>
 <% end %>

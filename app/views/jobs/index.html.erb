@@ -1,56 +1,30 @@
-<!-- <h1>Listing jobs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Desc</th>
-      <th>Company</th>
-      <th>Status</th>
-      <th>Owner</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= job.title %></td>
-        <td><%= job.desc %></td>
-        <td><%= job.company %></td>
-        <td><%= job.status %></td>
-        <td><%= job.owner %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Job', new_job_path %> -->
-
+<div class="row">
+  <div class="col-md-10">
+    <h2><%= t 'models.job.many' %></h2>
+  </div>
+  <div class="col-md-2">
+    <%= link_to raw("<i class='fa fa-plus'></i> #{t 'actions.new'} #{t 'models.job.one'}"), new_job_path, { class: "btn btn-sm btn-primary btn-block" } %>
+  </div>
+</div>
 
 <div class="row">
 
-  <div class="col-md-2 well well-sm">
+  <!-- <div class="col-md-2 well well-sm">
 
-    <!-- <div class="col-md-4">
+    <div class="col-md-4">
       <div class="input-group">
         <input type="text" class="form-control input-sm input-block-level">
         <span class="input-group-btn">
           <button class="btn btn-sm btn-primary" type="button">Search</button>
         </span>
       </div>
-    </div> -->
+    </div> 
     <div style="margin-bottom: 10px;">
-      <h4 style="margin-top: 0;">Filters</h4>
+      <h4 style="margin-top: 0;"><%= t 'actions.filter' %></h4>
       <hr style="border-top: solid 1px #ccc; margin: 5px 0 10px 0; padding: 0;">
     </div>
     <div style="margin-bottom: 10px;">
-      <label><small>Status:&nbsp;</small></label><br>
+      <label><small><%= t 'models.job.status' %>:&nbsp;</small></label><br>
       <select class="input-sm" style="min-width: 140px;">
         <option>All</option>
         <option selected>Open</option>
@@ -58,20 +32,22 @@
       </select>
     </div>
     <div style="margin-bottom: 10px;">
-      <label><small>Owner:&nbsp;</small></label>
+      <label><small><%= t 'models.job.owner' %>:&nbsp;</small></label>
       <select class="input-sm" style="min-width: 140px; max-width: 140px !important; overflow: hidden;">
         <option style="max-width: 140px !important; overflow: hidden;" selected>All</option>
         <option style="max-width: 140px !important; overflow: hidden;">You</option>
         <option style="max-width: 140px !important; overflow: hidden;">Your teams</option>
       </select>
     </div>
+    <hr style="border-top: solid 1px #ccc; margin: 5px 0 10px 0; padding: 0;">
     <div>
-      <hr style="border-top: solid 1px #ccc; margin: 5px 0 10px 0; padding: 0;">
-      <%= link_to raw("<i class='fa fa-plus'></i> New Job Opening"), new_job_path, { class: "btn btn-sm btn-primary", style: "width: 100%;" } %>
+      <%= link_to raw("<i class='fa fa-plus'></i> #{t 'actions.new'} #{t 'models.job.one'}"), new_job_path, { class: "btn btn-sm btn-primary", style: "width: 100%;" } %>
     </div>
   </div>
   
-  <div class="col-md-10">
+  <div class="col-md-10"> -->
+
+  <div class="col-md-12">
 
     <div class="list-group">
 

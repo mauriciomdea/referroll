@@ -21,7 +21,11 @@ body {
   font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-   /*font-family: "Cabin", Arial, sans-serif;*/ 
+  line-height: 100%;
+  margin-top: auto;
+}
+.row {
+  margin-bottom: 10px;
 }
 .navbar-collapse {
   min-height: 60px;
@@ -30,7 +34,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .navbar-default .navbar-brand, .navbar-inverse .navbar-brand {
   font-family: 'Dancing Script', cursive;
-  /*color: #18bc9c;*/
+  color: #18bc9c;
   font-size: 36px;
   line-height: 18px;
   padding-right: 30px;

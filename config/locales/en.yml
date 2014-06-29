@@ -34,13 +34,20 @@ en:
     open: 'Open'
     close: 'Close'
     help: 'Help'
-    create: 'Create'
+    new: 'New'
     back: 'Back'
+    filter: 'Filter'
   models:
     user: 
       many: 'Users'
     job: 
+      one: 'Job'
       many: 'Jobs'
+      title: 'Title'
+      desc: 'Description'
+      company: 'Company'
+      status: 'Status'
+      owner: 'Owner'
     referral: 
       many: 'Referrals'
     team: 
@@ -49,6 +56,17 @@ en:
       many: 'Scores'
     notification:
       many: 'Notifications'
+  notices:
+    create: "%{model} was successfully created."
+    update: "%{model} was successfully updated."
+    destroy: "%{model} was successfully destroyed."
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: "Create %{model}"
+      submit: "Save %{model}"
+      update: "Update %{model}"
   date:
     abbr_day_names:
     - Sun
@@ -185,13 +203,6 @@ en:
       header:
         one: 1 error prohibited this %{model} from being saved
         other: ! '%{count} errors prohibited this %{model} from being saved'
-  helpers:
-    select:
-      prompt: Please select
-    submit:
-      create: Create %{model}
-      submit: Save %{model}
-      update: Update %{model}
   number:
     currency:
       format:

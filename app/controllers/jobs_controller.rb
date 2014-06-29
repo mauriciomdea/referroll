@@ -25,7 +25,7 @@ class JobsController < ApplicationController
     @job.owner = current_user
 
     if @job.save
-      redirect_to @job, notice: 'Job was successfully created.'
+      redirect_to @job, notice: t('notices.create', model: t('models.job.one'))
     else
       render :new
     end
@@ -34,7 +34,7 @@ class JobsController < ApplicationController
   # PATCH/PUT /jobs/1
   def update
     if @job.update(job_params)
-      redirect_to @job, notice: 'Job was successfully updated.'
+      redirect_to @job, notice: t('notices.update', model: t('models.job.one'))
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   def destroy
     @job.destroy
-    redirect_to jobs_url, notice: 'Job was successfully destroyed.'
+    redirect_to jobs_url, notice: t('notices.destroy', model: t('models.job.one'))
   end
 
   private
