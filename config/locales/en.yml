@@ -34,9 +34,10 @@ en:
     open: 'Open'
     close: 'Close'
     help: 'Help'
-    new: 'New'
+    new: "New %{model}"
     back: 'Back'
     filter: 'Filter'
+    cancel: 'Cancel'
   models:
     user: 
       many: 'Users'
