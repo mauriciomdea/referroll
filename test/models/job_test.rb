@@ -14,9 +14,9 @@ class JobTest < ActiveSupport::TestCase
 	  assert_not job.save, "Saved job without a title"
 	end
 
-	test "should set Job status as OPEN during creation" do
+	test "should set Job status as open during creation" do
   	job = create(:job)
-	  assert_equal 'OPEN', job.status, "New job status is not OPEN"
+	  assert_equal 'Open', job.status.text, "New job status is not open"
 	end
 
 end

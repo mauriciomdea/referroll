@@ -23,7 +23,6 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.owner = current_user
-    @job.status = 'OPEN'
 
     if @job.save
       redirect_to @job, notice: t('notices.create', model: t('models.job.one'))

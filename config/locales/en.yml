@@ -21,43 +21,49 @@
 
 en:
   referroll:
-    name: 'Referroll'
-    slogan: 'Get your Talent Referral Program ROLLING!'
-    cta: 'Learn More'
-    copyright: 'Copyright 2014 by <a href=http://brandnewcode.com>Brand New Code</a>'
+    name: "Referroll"
+    slogan: "Get your Talent Referral Program ROLLING!"
+    cta: "Learn More"
+    copyright: "Copyright 2014 by <a href=http://brandnewcode.com>Brand New Code</a>"
   actions: 
-    home: 'Home'
-    sign-up: 'Sign Up'
-    sign-in: 'Sign In'
-    sign-out: 'Sign Out'
-    sign-in-with: 'Sign in with'
-    open: 'Open'
-    close: 'Close'
-    help: 'Help'
+    home: "Home"
+    sign-up: "Sign Up"
+    sign-in: "Sign In"
+    sign-out: "Sign Out"
+    sign-in-with: "Sign in with"
+    open: "Open"
+    close: "Close"
+    help: "Help"
     new: "New %{model}"
     edit: "Edit %{model}"
-    back: 'Back'
-    filter: 'Filter'
-    cancel: 'Cancel'
+    back: "Back"
+    filter: "Filter"
+    cancel: "Cancel"
   models:
     user: 
-      many: 'Users'
+      many: "Users"
     job: 
-      one: 'Job'
-      many: 'Jobs'
-      title: 'Title'
-      desc: 'Description'
-      company: 'Company'
-      status: 'Status'
-      owner: 'Owner'
+      one: "Job"
+      many: "Jobs"
+      title: "Title"
+      desc: "Description"
+      company: "Company"
+      status: "Status"
+      owner: "Owner"
+      helper: "Helper"
     referral: 
-      many: 'Referrals'
+      many: "Referrals"
     team: 
-      many: 'Teams'
+      many: "Teams"
     score:
-      many: 'Scores'
+      many: "Scores"
     notification:
-      many: 'Notifications'
+      many: "Notifications"
+  enumerize:
+    job:
+      status:
+        open: "Open"
+        closed: "Closed"
   notices:
     create: "%{model} was successfully created."
     update: "%{model} was successfully updated."
@@ -102,9 +108,9 @@ en:
     - Friday
     - Saturday
     formats:
-      default: ! '%Y-%m-%d'
-      long: ! '%B %d %Y'
-      short: ! '%b %d'
+      default: ! "%Y-%m-%d"
+      long: ! "%B %d %Y"
+      short: ! "%b %d"
     month_names:
     -
     - January
@@ -149,16 +155,16 @@ en:
         other: over %{count} years
       x_days:
         one: 1 day
-        other: ! '%{count} days'
+        other: ! "%{count} days"
       x_minutes:
         one: 1 minute
-        other: ! '%{count} minutes'
+        other: ! "%{count} minutes"
       x_months:
         one: 1 month
-        other: ! '%{count} months'
+        other: ! "%{count} months"
       x_seconds:
         one: 1 second
-        other: ! '%{count} seconds'
+        other: ! "%{count} seconds"
     prompts:
       day: Day
       hour: Hour
@@ -167,7 +173,7 @@ en:
       second: Seconds
       year: Year
   errors:
-    format: ! '%{attribute} %{message}'
+    format: ! "%{attribute} %{message}"
     messages:
       accepted: "must be accepted"
       blank: "can't be blank"
@@ -186,7 +192,7 @@ en:
       not_a_number: is not a number
       not_an_integer: must be an integer
       odd: must be odd
-      record_invalid: ! 'Validation failed: %{errors}'
+      record_invalid: ! "Validation failed: %{errors}"
       restrict_dependent_destroy:
         one: "Cannot delete record because a dependent %{record} exists"
         many: "Cannot delete record because dependent %{record} exist"
@@ -202,15 +208,15 @@ en:
         other: is the wrong length (should be %{count} characters)
       other_than: "must be other than %{count}"
     template:
-      body: ! 'There were problems with the following fields:'
+      body: ! "There were problems with the following fields:"
       header:
         one: 1 error prohibited this %{model} from being saved
-        other: ! '%{count} errors prohibited this %{model} from being saved'
+        other: ! "%{count} errors prohibited this %{model} from being saved"
   number:
     currency:
       format:
         delimiter: ! ','
-        format: ! '%u%n'
+        format: ! "%u%n"
         precision: 2
         separator: .
         significant: false
@@ -224,21 +230,21 @@ en:
       strip_insignificant_zeros: false
     human:
       decimal_units:
-        format: ! '%n %u'
+        format: ! "%n %u"
         units:
           billion: Billion
           million: Million
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: ''
+          unit: ""
       format:
-        delimiter: ''
+        delimiter: ""
         precision: 3
         significant: true
         strip_insignificant_zeros: true
       storage_units:
-        format: ! '%n %u'
+        format: ! "%n %u"
         units:
           byte:
             one: Byte
@@ -249,20 +255,20 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: ""
         format: "%n%"
     precision:
       format:
-        delimiter: ''
+        delimiter: ""
   support:
     array:
-      last_word_connector: ! ', and '
-      two_words_connector: ! ' and '
-      words_connector: ! ', '
+      last_word_connector: ! ", and "
+      two_words_connector: ! " and "
+      words_connector: ! ", "
   time:
     am: am
     formats:
-      default: ! '%a, %d %b %Y %H:%M:%S %z'
-      long: ! '%B %d, %Y %H:%M'
-      short: ! '%d %b %H:%M'
+      default: ! "%a, %d %b %Y %H:%M:%S %z"
+      long: ! "%B %d, %Y %H:%M"
+      short: ! "%d %b %H:%M"
     pm: pm

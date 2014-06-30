@@ -38,6 +38,8 @@ gem 'jquery-rails'
 
 gem 'mongoid', '~> 4.0.0.rc2'
 
+gem 'enumerize'
+
 gem 'omniauth', '~> 1.2.1'
 gem 'omniauth-linkedin-oauth2', '~> 0.1.5'
 gem 'omniauth-google-oauth2', '~> 0.2.4'

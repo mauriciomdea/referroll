@@ -64,11 +64,11 @@
             <% else %>
               <span class="label label-default label-owner">helper</span> 
             <% end %>
-            <%= job.title.capitalize %>
+            <%= job.title %>
           </h4>
           <small class="list-group-item-text">
             <!-- {{#unless open}}<span class="label label-default">closed</span> {{/unless}} -->
-            <% unless job.status == "open" %><span class="label label-default"><%= job.status %></span><% end %>
+            <% if job.closed? %><span class="label label-default"><%= job.status.text.downcase %></span><% end %>
             Posted <%= time_ago_in_words(job.created_at) %> ago.
           </small>
         <% end %>
