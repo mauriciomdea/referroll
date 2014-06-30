@@ -1,0 +1,13 @@
+<h3>
+  <%= @job.title %>
+  <span class="label label-info pull-right"><%= @job.status.text.downcase %></span>
+</h3>
+<p><%= @job.desc %></p>
+<p><small>Posted <%= time_ago_in_words(@job.created_at) %> ago by <%= @job.owner.name %>.</small></p>
+<br>
+<p>No referrals yet.</p>
+
+<hr>
+
+<%= link_to t('actions.back'), jobs_path, class: 'btn btn-primary btn-block' %>
+<%= link_to 'Edit Job', edit_job_path(@job), class: 'btn btn-default btn-block' %>

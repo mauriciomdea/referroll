@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-md-10">
+    <h3><%= t 'models.job.many' %></h3>
+  </div>
+  <div class="col-md-2">
+    <%= link_to raw("<i class='fa fa-plus'></i> #{t('actions.new', model: t('models.job.one'))}"), new_job_path, { class: "btn btn-sm btn-primary btn-block" } %>
+  </div>
+</div>
+
+<div class="row">
+
+  <!-- <div class="col-md-2 well well-sm">
+
+    <div class="col-md-4">
+      <div class="input-group">
+        <input type="text" class="form-control input-sm input-block-level">
+        <span class="input-group-btn">
+          <button class="btn btn-sm btn-primary" type="button">Search</button>
+        </span>
+      </div>
+    </div> 
+    <div style="margin-bottom: 10px;">
+      <h4 style="margin-top: 0;"><%= t 'actions.filter' %></h4>
+      <hr style="border-top: solid 1px #ccc; margin: 5px 0 10px 0; padding: 0;">
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label><small><%= t 'models.job.status' %>:&nbsp;</small></label><br>
+      <select class="input-sm" style="min-width: 140px;">
+        <option>All</option>
+        <option selected>Open</option>
+        <option>Closed</option>
+      </select>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label><small><%= t 'models.job.owner' %>:&nbsp;</small></label>
+      <select class="input-sm" style="min-width: 140px; max-width: 140px !important; overflow: hidden;">
+        <option style="max-width: 140px !important; overflow: hidden;" selected>All</option>
+        <option style="max-width: 140px !important; overflow: hidden;">You</option>
+        <option style="max-width: 140px !important; overflow: hidden;">Your teams</option>
+      </select>
+    </div>
+    <hr style="border-top: solid 1px #ccc; margin: 5px 0 10px 0; padding: 0;">
+    <div>
+      <%= link_to raw("<i class='fa fa-plus'></i> #{t 'actions.new'} #{t 'models.job.one'}"), new_job_path, { class: "btn btn-sm btn-primary", style: "width: 100%;" } %>
+    </div>
+  </div>
+  
+  <div class="col-md-10"> -->
+
+  <div class="col-md-12">
+
+    <div class="list-group">
+
+      <% @jobs.each do |job| %>
+        <%= link_to(job, { class: "list-group-item" }) do %>
+          <!-- {{#if referrals}}
+            <span class="badge">{{referrals.length}} referrals</span>
+          {{else}} -->
+            <button class="btn btn-sm btn-primary pull-right"><i class="fa fa-hand-o-right"></i> ask for referrals</button>
+          <!-- {{/if}} -->
+          <h4 class="list-group-item-heading">
+            <% if job.owned_by?(current_user) %>
+              <span class="label label-default label-owner">owner</span> 
+            <% else %>
+              <span class="label label-default label-owner">helper</span> 
+            <% end %>
+            <%= job.title %>
+          </h4>
+          <small class="list-group-item-text">
+            <!-- {{#unless open}}<span class="label label-default">closed</span> {{/unless}} -->
+            <% if job.closed? %><span class="label label-default"><%= job.status.text.downcase %></span><% end %>
+            Posted <%= time_ago_in_words(job.created_at) %> ago.
+          </small>
+        <% end %>
+      <% end %>
+
+    </div>  <!-- list-group -->
+
+  </div> <!-- col-md-10 -->
+
+</div> <!-- row -->

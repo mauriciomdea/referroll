@@ -1,5 +1,7 @@
 class User
   include Mongoid::Document
+  include Mongoid::Timestamps
+  
 
   field :name, type: String
   field :desc, type: String
@@ -8,6 +10,7 @@ class User
   field :url, type: String
 
   has_many :authentications
+  has_many :jobs
 
   validates_uniqueness_of :email
 

@@ -15,17 +15,22 @@ pt_BR:
     help: 'Ajuda'
   models:
     user: 
-      many: 'Users'
+      many: 'Usuários'
     job: 
-      many: 'Jobs'
+      many: 'Vagas'
     referral: 
-      many: 'Referrals'
+      many: 'Indicações'
     team: 
-      many: 'Teams'
+      many: 'Times'
     score:
-      many: 'Scores'
+      many: 'Pontuações'
     notification:
-      many: 'Notifications'
+      many: 'Notificações'
+  enumerize:
+    job:
+      status:
+        open: "Aberta"
+        closed: "Fechada"
   date:
     abbr_day_names:
     - Dom

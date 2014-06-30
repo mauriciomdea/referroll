@@ -1,5 +1,6 @@
 class Authentication
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :user_id, type: String
   field :provider, type: String

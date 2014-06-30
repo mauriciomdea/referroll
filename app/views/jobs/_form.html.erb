@@ -1,0 +1,38 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label t('models.job.title'), class: 'control-label' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t('models.job.desc'), class: 'control-label' %>
+    <%= f.text_area :desc, size: '140x3', class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label t('models.job.company'), class: 'control-label' %>
+    <%= f.text_field :company, class: 'form-control' %>
+  </div>
+  <% if @job.persisted? %>
+  <div class="form-group">
+    <%= f.label t('models.job.status'), class: 'control-label' %>&nbsp;
+    <%= f.select :status, Job.status.options %>
+  </div>
+  <% end %>
+
+  <div>
+    <%= f.submit t('helpers.submit.save'), class: 'btn btn-primary btn-block' %>
+    <%= link_to t('actions.cancel'), jobs_path, class: 'btn btn-default btn-block' %>
+  </div>
+
+<% end %>

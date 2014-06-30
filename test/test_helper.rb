@@ -1,6 +1,8 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+# With this line in place we can remove FactoryGirl. and call create() directly
+include FactoryGirl::Syntax::Methods
 
 class TestCase
 

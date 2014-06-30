@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+intern:
+  title: Intern
+  desc: Internship.
+  company: ACME
+  owner: default
+
+manager:
+  title: Manager
+  desc: Management.
+  company: ACME
+  owner: default
+
+confidential:
+  title: Manager
+  desc: Manager for confidential company.
+  owner: default

@@ -38,6 +38,8 @@ gem 'jquery-rails'
 
 gem 'mongoid', '~> 4.0.0.rc2'
 
+gem 'enumerize'
+
 gem 'omniauth', '~> 1.2.1'
 gem 'omniauth-linkedin-oauth2', '~> 0.1.5'
 gem 'omniauth-google-oauth2', '~> 0.2.4'
@@ -47,4 +49,8 @@ gem 'omniauth-google-oauth2', '~> 0.2.4'
 group :development do
 	gem 'spring'
   gem 'meta_request'
+end
+
+group :test do
+  gem 'factory_girl_rails'
 end
