@@ -32,4 +32,8 @@ class ApplicationController < ActionController::Base
 	    session[:user_id] = user.nil? ? user : user.id
 	  end
 
+	  def authorize
+		  redirect_to sign_in_url, alert: t('errors.messages.not_authorized') if current_user.nil?
+		end
+
 end

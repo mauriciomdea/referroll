@@ -61,6 +61,36 @@ ul.nav.navbar-nav > li > .active {
 .btn > i {
   margin-right: 2px;
 }
+.btn-filter {
+  min-width: 120px;
+}
+.btn-linkedin {
+  color: rgb(18,92,168);
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+.btn-linkedin:hover {
+  color: #ffffff;
+  background-color: rgb(18,92,168);
+  border-color: rgb(18,92,168);
+}
+.btn-google {
+  color: rgb(203,26,22);
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+.btn-google:hover {
+  color: #ffffff;
+  background-color: rgb(203,26,22);
+  border-color: rgb(203,26,22);
+}
+
+.twitter {
+  color: rgb(33,154,234);
+}
+.facebook a {
+  background: rgb(45,67,139);
+}
 
 .fa.pull-right {
  margin-left: inherit; 
@@ -100,9 +130,6 @@ ul.nav.navbar-nav > li > .active {
   top: 60px;
 }
 
-.btn-filter {
-  min-width: 120px;
-}
 .label-owner {
   min-width: 40px;
   margin-right: 10px;
@@ -110,9 +137,6 @@ ul.nav.navbar-nav > li > .active {
   float: left;
 }
 
-.table-list-group {
-   
-}
 .table-list-group > tbody > tr {
   border: 1px solid #eee;
 }
@@ -142,5 +166,13 @@ ul.nav.navbar-nav > li > .active {
   text-decoration: none;
 }
 .div-referral-info > h4 > a:hover, .div-referral-info > small > a:hover {
+  text-decoration: underline;
+}
+
+a.unstyled {
+  color: #2c3e50;
+  text-decoration: none;
+}
+a.unstyled:hover {
   text-decoration: underline;
 }

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user), notice: "Signed in."
     else
-      redirect_to root_path, notice: "Authentication failed."
+      redirect_to sign_in_url, notice: "Authentication failed."
     end
 
   end
@@ -58,7 +58,7 @@ class SessionsController < ApplicationController
   def destroy
 
     self.current_user = nil
-	  redirect_to root_url, notice: "Signed out."
+	  redirect_to sign_in_url, notice: "Signed out."
 	  
 	end
 

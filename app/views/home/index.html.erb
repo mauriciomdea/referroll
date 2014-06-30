@@ -9,8 +9,9 @@
           <h3 class="masthead-brand"><%= t 'referroll.name' %></h3>
           <ul class="nav masthead-nav">
             <li class="active"><a href="#"><%= t 'actions.home' %></a></li>
-            <li><a href="#"><%= t 'actions.sign-up' %></a></li>
-            <li><a href="#" data-toggle="modal" data-target="#signInModal"><%= t 'actions.sign-in' %></a></li>
+            <!-- <li><a href="#"><%= t 'actions.sign-up' %></a></li> -->
+            <!-- <li><a href="#" data-toggle="modal" data-target="#signInModal"><%= t 'actions.sign-in' %></a></li> -->
+            <li><%= link_to t('actions.sign-in'), sign_in_url %></li>
           </ul>
         </div>
       </div>
@@ -45,8 +46,7 @@
         <h4 class="modal-title" id="signInModalLabel"><%= t 'actions.sign-in' %></h4>
       </div>
       <div class="modal-body">
-        <p><%= link_to raw("<i class='fa fa-fw fa-linkedin-square'></i> #{t 'actions.sign-in-with'} Linkedin"), "/auth/linkedin", class: "btn btn-lg btn-primary" %></p>
-        <p><%= link_to raw("<i class='fa fa-fw fa-google-plus-square'></i> #{t 'actions.sign-in-with'} Google"), "/auth/google", class: "btn btn-lg btn-primary" %></p>
+        <%= render 'shared/providers' %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><%= t 'actions.close' %></button>
