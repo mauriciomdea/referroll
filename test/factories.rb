@@ -1,13 +1,15 @@
 FactoryGirl.define do
 
   factory :user, aliases: [:owner] do
-  	name			"Default User"
-    email			"default@example.com"
+  	# name			"Default User"
+  	# email			"default@example.com"
+  	sequence(:name) { |n| "User #{n}" }
+  	email { "#{name.parameterize}@example.com" }
   end
 
   factory :authentication do
 		provider	"linkedin"
-  	uid				"01234"
+  	uid				{ |n| "#{n}" }
   	user
   end
 
