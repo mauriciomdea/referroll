@@ -35,6 +35,7 @@ en:
     close: 'Close'
     help: 'Help'
     new: "New %{model}"
+    edit: "Edit %{model}"
     back: 'Back'
     filter: 'Filter'
     cancel: 'Cancel'
